@@ -140,6 +140,13 @@
             updateDisplay();
         }
 
+        function convertToDollars() {
+            if (currentInput === '') return;
+            let result = (parseFloat(currentInput) * 4127.04);
+            currentInput = result.toString();
+            updateDisplay();
+        }
+
         function clearDisplay() {
             currentInput = '';
             operator = '';
