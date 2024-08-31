@@ -70,6 +70,11 @@
             <button class="button" onclick="clearDisplay()">C</button>
             <button class="button operator" onclick="calculateResult()">=</button>
             <button class="button operator" onclick="setOperator('+')">+</button>
+
+            <button class="button operator" onclick="convertToFahrenheit()">T</button>
+            <button class="button operator" ></button>
+            <button class="button operator" ></button>
+            <button class="button operator" ></button>
         </div>
     </div>
 
@@ -111,6 +116,13 @@
             currentInput = result;
             operator = '';
             firstOperand = '';
+            updateDisplay();
+        }
+
+        function convertToFahrenheit() {
+            if (currentInput === '') return;
+            let result = (parseFloat(currentInput) * 1.8) + 32;
+            currentInput = result.toString();
             updateDisplay();
         }
 
