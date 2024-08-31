@@ -72,9 +72,9 @@
             <button class="button operator" onclick="setOperator('+')">+</button>
 
             <button class="button operator" onclick="convertToFahrenheit()">T</button>
-            <button class="button operator" ></button>
-            <button class="button operator" ></button>
-            <button class="button operator" ></button>
+            <button class="button operator" onclick="convertToKilograms()">P</button>
+            <button class="button operator" onclick="convertToPsi()">PR</button>
+            <button class="button operator" onclick="convertToDollars()">M</button>
         </div>
     </div>
 
@@ -122,6 +122,13 @@
         function convertToFahrenheit() {
             if (currentInput === '') return;
             let result = (parseFloat(currentInput) * 1.8) + 32;
+            currentInput = result.toString();
+            updateDisplay();
+        }
+
+        function convertToKilograms() {
+            if (currentInput === '') return;
+            let result = (parseFloat(currentInput) / 1000);
             currentInput = result.toString();
             updateDisplay();
         }
