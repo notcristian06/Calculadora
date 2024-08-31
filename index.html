@@ -133,6 +133,13 @@
             updateDisplay();
         }
 
+        function convertToPsi() {
+            if (currentInput === '') return;
+            let result = (parseFloat(currentInput) * 14.504);
+            currentInput = result.toString();
+            updateDisplay();
+        }
+
         function clearDisplay() {
             currentInput = '';
             operator = '';
