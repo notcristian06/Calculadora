@@ -1,55 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <style>
+        body {
+            background-color: #ecd7ff;
+        }
+
         .calculator {
             width: 200px;
             margin: 0 auto;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #000000;
             border-radius: 5px;
         }
+
         .display {
             width: 100%;
             height: 40px;
             margin-bottom: 10px;
             text-align: right;
             padding: 5px;
-            border: 1px solid #ccc;
+            border: 1px solid #000000;
             border-radius: 5px;
             font-size: 1.5em;
         }
+
         .buttons {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 5px;
         }
+
         .button {
             width: 100%;
             height: 50px;
             font-size: 1.2em;
-            border: 1px solid #ccc;
+            border: 1px solid #000000;
             border-radius: 5px;
             background-color: #f9f9f9;
             cursor: pointer;
         }
+
         .button.operator {
             background-color: #a0c9ff;
         }
+
         .button.operator:hover {
             background-color: #f39c12;
         }
+
         .button:hover {
             background-color: #e0e0e0;
         }
     </style>
 </head>
+
 <body>
-    <div><h2>Proyecto Calculadora</h2></div>
-    <div><h3>Cristian Jacome</h3></div>
+    <div>
+        <h2>Proyecto Calculadora</h2>
+    </div>
+    <div>
+        <h3>Cristian Jacome</h3>
+    </div>
     <div class="calculator">
         <div id="display" class="display"></div>
         <div class="buttons">
@@ -57,17 +73,17 @@
             <button class="button" onclick="appendNumber('8')">8</button>
             <button class="button" onclick="appendNumber('9')">9</button>
             <button class="button operator" onclick="setOperator('/')">/</button>
-            
+
             <button class="button" onclick="appendNumber('4')">4</button>
             <button class="button" onclick="appendNumber('5')">5</button>
             <button class="button" onclick="appendNumber('6')">6</button>
             <button class="button operator" onclick="setOperator('*')">*</button>
-            
+
             <button class="button" onclick="appendNumber('1')">1</button>
             <button class="button" onclick="appendNumber('2')">2</button>
             <button class="button" onclick="appendNumber('3')">3</button>
             <button class="button operator" onclick="setOperator('-')">-</button>
-            
+
             <button class="button" onclick="appendNumber('0')">0</button>
             <button class="button" onclick="clearDisplay()">C</button>
             <button class="button operator" onclick="calculateResult()">=</button>
@@ -161,4 +177,5 @@
         }
     </script>
 </body>
+
 </html>
